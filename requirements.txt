@@ -6,4 +6,6 @@ streamlit
 plotly
 pandas  # ou d'autres bibliothèques que tu utilises
 numpy
+seaborn
+
 
