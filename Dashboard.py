@@ -5,7 +5,7 @@ import plotly.express as px
 import streamlit as st
 from datetime import datetime
 import seaborn as sns
-
+import os
 from plotly.subplots import make_subplots
 
 st.title("Tableau de Bord des Performances de Rameurs : Analyses et Visualisations")
@@ -31,7 +31,14 @@ st.markdown("split_stroke_count0 : la cadence sur le split 0 500 m ")
 
 
 # Chargement des données
-result = pd.read_csv("C:/Users/pc/Documents/Dasbord/result.csv")
+
+
+if os.path.exists("result.csv"):
+    result = pd.read_csv("result.csv")
+else:
+    st.error("Le fichier result.csv n'a pas été trouvé.")
+
+result = pd.read_csv("result.csv")
 result=result.round(2)
 result
 
