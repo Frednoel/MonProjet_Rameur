@@ -64,7 +64,7 @@ var_dict = {
                            "split_time33"]
 }
 
-def plot_distribution(feature, selection):
+def plot_distribution(features, selection):
   
 
     if selection == "Histogramme":
